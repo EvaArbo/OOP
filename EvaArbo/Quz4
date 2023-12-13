@@ -1,0 +1,48 @@
+/*XI.	Create a new class called CalculateG.*/
+class CalculateG {
+    public static void main(String[] args) {
+        double gravity = -9.81; // Earth's gravity in m/s^2
+        double fallingTime = 30;
+        double initialVelocity = 0.0;
+        double finalVelocity = gravity * fallingTime + initialVelocity;
+        double initialPosition = 0.0;
+        double finalPosition = 0.5 * gravity * Math.pow(fallingTime, 2) + initialVelocity * fallingTime + initialPosition;
+        System.out.println("The object's position after " + fallingTime + " seconds is " + finalPosition + " m.");
+        System.out.println("The object's velocity after " + fallingTime + " seconds is " + finalVelocity + " m/s.");
+    }
+}
+/*To extend the CalculateG class with the methods for multiplication, powering to square, summation, and printing out a result, you can use the following code:
+
+Java
+AI-generated code. Review and use carefully. More info on FAQ.*/
+
+public class CalculateG {
+    public double multi(double a, double b) { // method for multiplication
+        return a * b;
+    }
+
+    public double power(double a) { // method for powering to square
+        return Math.pow(a, 2);
+    }
+
+    public double sum(double a, double b) { // method for summation
+        return a + b;
+    }
+
+    public void outline(String result) { // method for printing out a result
+        System.out.println(result);
+    }
+
+    public static void main(String[] args) {
+        CalculateG calc = new CalculateG();
+        double a = 2.0;
+        double b = 3.0;
+        double result = calc.multi(a, b);
+        System.out.println("The result of multiplying " + a + " and " + b + " is " + result + ".");
+        result = calc.power(a);
+        System.out.println("The square of " + a + " is " + result + ".");
+        result = calc.sum(a, b);
+        System.out.println("The sum of " + a + " and " + b + " is " + result + ".");
+        calc.outline("This is the final result.");
+    }
+}

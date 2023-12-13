@@ -1,0 +1,53 @@
+/* differentiate between function overloading and operator overloading, pass by value and pass by reference, parameters and arguments*/
+#include <iostream>
+using namespace std;
+
+// Function overloading
+int add(int x, int y) {
+    return x + y;
+}
+
+double add(double x, double y) {
+    return x + y;
+}
+
+// Operator overloading
+class Complex {
+public:
+    int real, imag;
+    Complex operator+(Complex const &obj) {
+        Complex res;
+        res.real = real + obj.real;
+        res.imag = imag + obj.imag;
+        return res;
+    }
+};
+
+// Pass by value and pass by reference
+void swap(int &x, int &y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+int main() {
+    // Function overloading
+    cout << add(1, 2) << endl;
+    cout << add(1.0, 2.0) << endl;
+
+    // Operator overloading
+    Complex c1, c2, c3;
+    c1.real = 1;
+    c1.imag = 2;
+    c2.real = 3;
+    c2.imag = 4;
+    c3 = c1 + c2;
+    cout << c3.real << " + i" << c3.imag << endl;
+
+    // Pass by value and pass by reference
+    int a = 1, b = 2;
+    swap(a, b);
+    cout << a << " " << b << endl;
+
+    return 0;
+}

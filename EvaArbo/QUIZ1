@@ -1,0 +1,106 @@
+/*Constructor*/
+public class Car {
+    private String make;
+    private String model;
+    private int year;
+
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+}
+/*Object*/
+Car myCar = new Car("Toyota", "Corolla", 2022);
+
+ /*Polymorphism*/
+ public class Animal {
+    public void makeSound() {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+public class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("The dog barks");
+    }
+}
+
+public class Cat extends Animal {
+    public void makeSound() {
+        System.out.println("The cat meows");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+
+        myAnimal.makeSound();
+        myDog.makeSound();
+        myCat.makeSound();
+    }
+}
+/*Class*/
+public class Car {
+    private String make;
+    private String model;
+    private int year;
+
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+}
+/*Inheritance*/
+public class Vehicle {
+    private String make;
+    private String model;
+    private int year;
+
+    public Vehicle(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+}
+
+public class Car extends Vehicle {
+    private int numDoors;
+
+    public Car(String make, String model, int year, int numDoors) {
+        super(make, model, year);
+        this.numDoors = numDoors;
+    }
+
+    public int getNumDoors() {
+        return numDoors;
+    }
+}

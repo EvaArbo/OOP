@@ -1,0 +1,69 @@
+/*Write a C++ program that takes 15 values of type integer as inputs from user, store the values in an array.*/
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int arr[15], arr2[15];
+    int i, num, sum = 0, prod = 1;
+
+    // Take input from user
+    for (i = 0; i < 15; i++) {
+        cout << "Enter value " << i + 1 << ": ";
+        cin >> arr[i];
+    }
+
+    // Print the values stored in the array
+    cout << "Values stored in the array: ";
+    for (i = 0; i < 15; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // Ask user to enter a number and check if it is present in the array
+    cout << "Enter a number to search: ";
+    cin >> num;
+    for (i = 0; i < 15; i++) {
+        if (arr[i] == num) {
+            cout << "The number found at index " << i << endl;
+            break;
+        }
+    }
+    if (i == 15) {
+        cout << "Number not found in this array" << endl;
+    }
+
+    // Create another array and copy all the elements from the existing array but in reverse order
+    for (i = 0; i < 15; i++) {
+        arr2[i] = arr[14 - i];
+    }
+
+    // Print the elements of the new array
+    cout << "Elements of the new array: ";
+    for (i = 0; i < 15; i++) {
+        cout << arr2[i] << " ";
+    }
+    cout << endl;
+
+    // Get the sum and product of all elements of the array
+    for (i = 0; i < 15; i++) {
+        sum += arr[i];
+        prod *= arr[i];
+    }
+
+    // Print the sum and product of all elements of the array
+    cout << "Sum of all elements of the array: " << sum << endl;
+    cout << "Product of all elements of the array: " << prod << endl;
+    return 0;
+}
+
+
+ 
+
+	
+
+
+
+
+
